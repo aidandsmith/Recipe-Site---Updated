@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #252222;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, span, ol, ul, li, p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.nav-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+}
+
+.nav-wrapper p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.recipes-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-top: 150px;
+}
+
+.recipe-card-preview {
+    background: rgb(83, 83, 83);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card-preview:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.recipe-card-preview.active {
+    border: 2px solid #007bff;
+}
+
+.recipe-card-preview h3 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.cuisine-tag {
+    display: inline-block;
+    background: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.recipe-display {
+    background: rgb(83, 83, 83);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.recipe-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #303030;
+    border-radius: 8px;
+}
+
+.recipe-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.instructions ol {
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.convert-units-btn, .double-servings-btn {
+    background: #303030;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: background-color 0.2s ease;
+}
+
+.convert-units-btn:hover, .double-servings-btn:hover {
+    background: #444444;
+}
+
+.recipe-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 10px;
+}
+
+.recipe-header {
+    margin-bottom: 2rem;
+}
+
+.recipe-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Tablet Styles (768px to 1024px) */
+@media screen and (max-width: 1440px) {
+    .nav-wrapper {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 100px;
+    }
+
+    .recipe-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .recipe-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Styles (up to 767px) */
+@media screen and (max-width: 767px) {
+    .nav-wrapper {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .recipe-list {
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+    }
+
+    .recipe-display {
+        padding: 1rem;
+    }
+
+    .recipe-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .convert-units-btn, 
+    .double-servings-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .recipe-image {
+        max-height: 300px;
+    }
+}
