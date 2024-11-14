@@ -51,9 +51,9 @@ async function loadRecipes() {
                         </div>
                         
                         <div class="recipe-meta">
-                            <span><i class="time-icon"></i>Prep: ${formatTime(recipe.prepTime)}</span>
-                            <span><i class="cook-icon"></i>Cook: ${formatTime(recipe.cookTime)}</span>
-                            <span><i class="serving-icon"></i>Serves: <span class="servings-count">${recipe.servings}</span></span>
+                            <span><i class="time-icon"></i>Prep Time: ${formatTime(recipe.prepTime)}</span>
+                            <span><i class="cook-icon"></i>Cook Time: ${formatTime(recipe.cookTime)}</span>
+                            <span><i class="serving-icon"></i>Serves(People): <span class="servings-count">${recipe.servings}</span></span>
                             <span><i class="difficulty-icon"></i>Difficulty: ${recipe.difficulty}</span>
                         </div>
 
